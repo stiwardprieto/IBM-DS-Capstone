@@ -79,7 +79,7 @@ def get_scatter_chart(entered_site, payload_range):
                          (df['Payload Mass (kg)'] >= payload_range[0]) & 
                          (df['Payload Mass (kg)'] <= payload_range[1])]
         fig = px.scatter(filtered_df, x='Payload Mass (kg)', y='class', 
-                         color='Booster Version Category',
+                         color='Booster Version',
                          title=f'Correlation between Payload and Success for {entered_site}')
         return fig
 
